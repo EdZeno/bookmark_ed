@@ -8,7 +8,9 @@ feature 'viewing bookmarks' do
 
   scenario 'visiting /bookmarks' do
     visit '/bookmarks'
-    expect(page).to have_content('["Bookmark1", "Bookmark2", "Bookmark3"]')
+    expect(page).to have_content("http://makers.tech")
+    expect(page).to have_content("http://www.destroyallsoftware.com")
+    expect(page).to have_content("http://www.google.com")
   end
 
 end
