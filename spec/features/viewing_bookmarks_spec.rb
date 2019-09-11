@@ -4,11 +4,11 @@ feature 'viewing bookmarks' do
   scenario 'visiting the index page' do
     connection = PG.connect(dbname: 'bookmark_manager_test')
 
-    connection.exec("INSERT INTO bookmarks VALUES (1, 'http://makers.tech');")
-    connection.exec("INSERT INTO bookmarks VALUES (2, 'http://www.destroyallsoftware.com');")
-    connection.exec("INSERT INTO bookmarks VALUES (3, 'http://www.google.com');")
+    Bookmarks.create(url: "http://makers.tech")
+    Bookmarks.create(url: "http://www.destroyallsoftware.com")
+    Bookmarks.create(url: "http://www.google.com")
 
-    visit '/bookmarks'
+    visit '/'
     expect(page).to have_content("http://makers.tech")
     expect(page).to have_content("http://www.destroyallsoftware.com")
     expect(page).to have_content("http://www.google.com")

@@ -1,4 +1,6 @@
 require_relative './setup_test_database.rb'
+require './spec/features/connect_helper.rb'
+
 
 ENV['ENVIRONMENT'] = 'test'
 
