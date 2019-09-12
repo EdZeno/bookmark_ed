@@ -46,6 +46,7 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/student/MAKERS/bookmark/bookmark_manager/spec/features/add_new_bookmarks_spec.rb": [
@@ -78,6 +79,6 @@
         null
       ]
     },
-    "timestamp": 1568299422
+    "timestamp": 1568299999
   }
 }

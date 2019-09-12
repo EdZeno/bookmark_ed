@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-09-12T15:43:42+01:00">2019-09-12T15:43:42+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-09-12T15:53:19+01:00">2019-09-12T15:53:19+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>45</b> relevant lines. 
-    <span class="green"><b>45</b> lines covered</span> and
+    <b>46</b> relevant lines. 
+    <span class="green"><b>46</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -63,9 +63,9 @@
       <tr>
         <td class="strong"><a href="#6a3395b2b1da44a82e9dd53fcda27253c7dba12d" class="src_link" title="spec/database_helpers.rb">spec/database_helpers.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
-        <td>5</td>
-        <td>5</td>
+        <td>8</td>
+        <td>6</td>
+        <td>6</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -297,7 +297,7 @@
         <li class="covered" data-hits="1" data-linenumber="30">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(bookmark.id).to eq persisted_data.first[1]</code>
+          <code class="ruby">      expect(bookmark.id).to eq persisted_data[&#39;id&#39;]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="31">
@@ -346,8 +346,8 @@
     <h3>spec/database_helpers.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -391,7 +391,13 @@
           <code class="ruby">  result.first</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  p result.first</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">end</code>
