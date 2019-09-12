@@ -1,7 +1,8 @@
 feature 'adds a new bookmark' do
   scenario 'from the home page ridirects to the page with the form' do
-    visit('/')
-    click_button('Add link')
-    expect(page).to have_content('Enter url')
+    visit('/bookmarks/new')
+    fill_in('url', with: 'http://testbookmark.com')
+    click_button('Submit')
+    expect(page).to have_content 'http://testbookmark.com'
   end
 end

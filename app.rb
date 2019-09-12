@@ -3,23 +3,20 @@ require './lib/bookmarks.rb'
 
 class BookmarkManager < Sinatra::Base
 
-  enable :sessions
 
-  get '/' do
+  get '/bookmarks' do
     @bookmarks = Bookmarks.all
     erb(:bookmarks)
   end
 
-  post '/add_link' do
-    Bookmark.create(url: params[:add_link])
-    redirect '/bookmarks/new'
-  end
-
   get '/bookmarks/new' do
-    @bookmark_new = session[:url]
-    erb :add_bookmark
+    erb :"bookmarks/new"
   end
 
+  post '/bookmarks' do
+    Bookmarks.create(url: params[:url])
+    redirect '/bookmarks'
+  end
 
   run! if app_file == $0
 end
